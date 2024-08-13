@@ -7,4 +7,4 @@
 5. 根组件的 data，可以“对象式”，也可以“函数式”
 6. 指定容器 可以 el，或 mount
 7. {{}} 这是 Vue 的插值语法，里面放的是 JS表达式
-8. Vue.js devtools 浏览器扩展，可以方便开发 Vue 应用
+8. Vue.js devtools 浏览器扩展，可以方便调试 Vue 应用 https://devtools.vuejs.org/  Browser devtools extension for debugging Vue.js applications
