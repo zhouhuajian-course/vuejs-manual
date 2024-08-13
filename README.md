@@ -8,3 +8,4 @@
 6. 指定容器 可以 el，或 mount，可以提供 容器的CSS选择器或者元素对象
 7. {{}} 这是 Vue 的插值语法，里面放的是 JS表达式
 8. Vue.js devtools 浏览器扩展，可以方便调试 Vue 应用 https://devtools.vuejs.org/  Browser devtools extension for debugging Vue.js applications
+9. Vue 的很多概念都非常抽象，例如挂载，其实就是把组件渲染出来的视图，放到某个容器里面；
