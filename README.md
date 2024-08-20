@@ -1,6 +1,6 @@
 # vuejs manual
 
-1. Vue 大版本以动漫名作为版本名 vue 1.0 vue 2.0 vue 3.0
+1. Vue 大版本发布时的代号是 动漫名 vue 1.0 vue 2.0 vue 3.0 https://github.com/vuejs/core/releases/tag/v3.0.0
 2. Vue 采用“组件化”模式
 3. 使用“声明式”编码，而非jQuery的“命令式”编码
 4. 容器里面的代码，被称为 “Vue模板”
@@ -18,6 +18,7 @@
 16. v-model一般需要用在表单类元素上，否者会有警告，例如`<input v-model:value="school_name" />`，默认的属性是value属性
 17. v-bind v-model等，双引号里面的，在Vue底层会当做 JS表达式 来使用，并不是普通的字符串
 18. v-bind 是单向数据绑定，v-model 是双向数据绑定。举例`<input v-href:value="school_name" />` 修改school_name，value值会跟着修改，但修改input的value属性，school_name不会跟着更改，单向数据绑定；`<input v-model:value="school_name" />` 修改school_name，value值会跟着修改，修改input的value属性，school_name也会跟着更改，双向数据绑定
-19. 尽量不要写缩写形式的指令，可读性比较差，例如 :href 改成 v-bind:href，v-model 改成 v-model:value
+19. 尽量不要写缩写形式的指令，可读性比较差，例如 :href 改成 v-bind:href，v-model 改成 v-model:value，貌似Vue3只能写v-model
 20. (Vue 2) 组件的数据，底层通过各种方式，最终会变成 组件实例 的属性，这些属性都做了数据代理，插值语法、指令语法中的 JS表达式 其实可以访问组件实例的所有属性 例如{{$emit}} {{_c}}
- 
+21. Vue2使用webpack前端构建工具 https://webpack.js.org/，Vue3使用Vite前端构建工具 https://vitejs.dev/
+22. Vite（法语意为 "快速的"，发音 /vit/，发音同 "veet"）是一种新型前端构建工具，能够显著提升前端开发体验。
