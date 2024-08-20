@@ -17,8 +17,13 @@
 15. 模板语法 有 插值语法 和 命令语法 两种语法，插值语法是元素内容里面使用，命令语法一般在元素属性上使用。例如`<a v-bind:href="school_url">{{school_name}}</a>` https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics
 16. v-model一般需要用在表单类元素上，否者会有警告，例如`<input v-model:value="school_name" />`，默认的属性是value属性
 17. v-bind v-model等，双引号里面的，在Vue底层会当做 JS表达式 来使用，并不是普通的字符串
-18. v-bind 是单向数据绑定，v-model 是双向数据绑定。举例`<input v-href:value="school_name" />` 修改school_name，value值会跟着修改，但修改input的value属性，school_name不会跟着更改，单向数据绑定；`<input v-model:value="school_name" />` 修改school_name，value值会跟着修改，修改input的value属性，school_name也会跟着更改，双向数据绑定
-19. 尽量不要写缩写形式的指令，可读性比较差，例如 :href 改成 v-bind:href，v-model 改成 v-model:value，貌似Vue3只能写v-model
-20. (Vue 2) 组件的数据，底层通过各种方式，最终会变成 组件实例 的属性，这些属性都做了数据代理，插值语法、指令语法中的 JS表达式 其实可以访问组件实例的所有属性 例如{{$emit}} {{_c}}
-21. Vue2使用webpack前端构建工具 https://webpack.js.org/，Vue3使用Vite前端构建工具 https://vitejs.dev/
-22. Vite（法语意为 "快速的"，发音 /vit/，发音同 "veet"）是一种新型前端构建工具，能够显著提升前端开发体验。
+18. Vue2组件使用data,methods，Vue3组件也可以用data,methods，但更推荐 组合式 API 而不是 选项式 API， `<script setup></script>` 是语法糖
+19. v-bind 是单向数据绑定，v-model 是双向数据绑定。举例`<input v-href:value="school_name" />` 修改school_name，value值会跟着修改，但修改input的value属性，school_name不会跟着更改，单向数据绑定；`<input v-model:value="school_name" />` 修改school_name，value值会跟着修改，修改input的value属性，school_name也会跟着更改，双向数据绑定
+20. 尽量不要写缩写形式的指令，可读性比较差，例如 :href 改成 v-bind:href，v-model 改成 v-model:value，貌似Vue3只能写v-model
+21. (Vue 2) 组件的数据，底层通过各种方式，最终会变成 组件实例 的属性，这些属性都做了数据代理，插值语法、指令语法中的 JS表达式 其实可以访问组件实例的所有属性 例如{{$emit}} {{_c}}
+22. Vue2使用webpack前端构建工具 https://webpack.js.org/，Vue3使用Vite前端构建工具 https://vitejs.dev/
+23. Vite（法语意为 "快速的"，发音 /vit/，发音同 "veet"）是一种新型前端构建工具，能够显著提升前端开发体验。
+24. Vue3，通过组合式 API，我们可以使用导入的 API 函数来描述组件逻辑。在单文件组件中，组合式 API 通常会与 `<script setup>` 搭配使用。这个 setup attribute 是一个标识，告诉 Vue 需要在编译时进行一些处理，让我们可以更简洁地使用组合式 API。比如，`<script setup>` 中的导入和顶层变量/函数都能够在模板中直接使用 https://cn.vuejs.org/guide/introduction#composition-api
+25. Vue3 在组合式 API 中，推荐使用 ref() 函数来声明响应式状态(数据)：还有另一种声明响应式状态的方式，即使用 reactive() API。与将内部值包装在特殊对象中的 ref 不同，reactive() 将使对象本身具有响应性： https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html
+26. 声明响应式数据，基本数据类型用 ref()，对象或数组数据类型用 ref() 或 reactive()，要留意这两种方式的不同点，例如reactive()，不需要像ref()一样总是加.value，reactive()可以用Object.assign()覆盖数据
+
