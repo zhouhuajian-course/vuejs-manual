@@ -28,3 +28,4 @@
 26. 声明响应式数据，基本数据类型用 ref()，对象或数组数据类型用 ref() 或 reactive()，要留意这两种方式的不同点，例如reactive()，不需要像ref()一样总是加.value，reactive()可以用Object.assign()覆盖数据
 27. (Vite+Vue) npm run dev ，运行的是 vite 命令，这个命令在，`node_modules/.bin/vite.cmd`，如果linux，则是 `node_modules/.bin/vite`
 28. `.vue` 文件是，Vue特有的文件，用来定义一个组件，组件里面可以写三个标签 `<script setup>` `<template></template>` `<style scoped></style>`
+29. (Vite+Vue) npm run dev，是启动 Vite 开发服务器
