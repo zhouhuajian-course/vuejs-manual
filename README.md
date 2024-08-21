@@ -29,3 +29,4 @@
 27. (Vite+Vue) npm run dev ，运行的是 vite 命令，这个命令在，`node_modules/.bin/vite.cmd`，如果linux，则是 `node_modules/.bin/vite`
 28. `.vue` 文件是，Vue特有的文件，用来定义一个组件，组件里面可以写三个标签 `<script setup>` `<template></template>` `<style scoped></style>`
 29. (Vite+Vue) npm run dev，是启动 Vite 开发服务器
+30. Vite 开发服务器，没自动更新，有一堆奇怪报错时，可 ctrl+r 重新加载页面，即可解决，不需要重启开发服务器
