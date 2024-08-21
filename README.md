@@ -26,4 +26,5 @@
 24. Vue3，通过组合式 API，我们可以使用导入的 API 函数来描述组件逻辑。在单文件组件中，组合式 API 通常会与 `<script setup>` 搭配使用。这个 setup attribute 是一个标识，告诉 Vue 需要在编译时进行一些处理，让我们可以更简洁地使用组合式 API。比如，`<script setup>` 中的导入和顶层变量/函数都能够在模板中直接使用 https://cn.vuejs.org/guide/introduction#composition-api
 25. Vue3 在组合式 API 中，推荐使用 ref() 函数来声明响应式状态(数据)：还有另一种声明响应式状态的方式，即使用 reactive() API。与将内部值包装在特殊对象中的 ref 不同，reactive() 将使对象本身具有响应性： https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html
 26. 声明响应式数据，基本数据类型用 ref()，对象或数组数据类型用 ref() 或 reactive()，要留意这两种方式的不同点，例如reactive()，不需要像ref()一样总是加.value，reactive()可以用Object.assign()覆盖数据
-
+27. (Vite+Vue) npm run dev ，运行的是 vite 命令，这个命令在，`node_modules/.bin/vite.cmd`，如果linux，则是 `node_modules/.bin/vite`
+28. `.vue` 文件是，Vue特有的文件，用来定义一个组件，组件里面可以写三个标签 `<script setup>` `<template></template>` `<style scoped></style>`
